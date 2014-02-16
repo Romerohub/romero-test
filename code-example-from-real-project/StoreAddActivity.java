@@ -59,7 +59,6 @@ public class StoreAddActivity extends Activity implements OnClickListener{
 				TextView s_name = (TextView)findViewById(R.id.storeName);
 				s_name.setText(name);
 				
-				
 				Button deleteBtn = (Button) findViewById(R.id.deleteBtn);
 				deleteBtn.setVisibility(View.VISIBLE );
 				deleteBtn.setOnClickListener(this);
@@ -86,8 +85,8 @@ public class StoreAddActivity extends Activity implements OnClickListener{
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setTitle("Deleting")
 			.setView(view)
-					.setMessage("Are you sure you want to delete? " )
-					.setCancelable(true);
+			.setMessage("Are you sure you want to delete? " )
+			.setCancelable(true);
 			
 			ImageView imageCancel = (ImageView) view.findViewById(R.id.imageCancel);
 			imageCancel.setOnClickListener(new OnClickListener() {
@@ -107,7 +106,7 @@ public class StoreAddActivity extends Activity implements OnClickListener{
 			    		stores.deleteById(store_id);
 			    	}
 			    	saaContext.finish();
-					alert.cancel();
+				alert.cancel();
 			    }
 			});
 			
@@ -137,9 +136,9 @@ public class StoreAddActivity extends Activity implements OnClickListener{
 	    	break;
 	    case R.id.btnBack:
 	    	finish();
-		   	break;
+		break;
 	    default:
-	      break;
+	        break;
 	    }
 	}
 
